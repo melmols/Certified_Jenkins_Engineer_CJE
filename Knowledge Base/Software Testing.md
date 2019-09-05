@@ -52,7 +52,6 @@ _ Manual
 Tests at the _bottom run quickly and inexpensively and should be run very frequently
 Tests at the _top take more time to run and are expensive; they should be run less frequently and only on software that has passed the tests lower on the pyramid.
 
-+---------------------------+
 | 1)  Manual                |
 | 2)  Acceptance            |
 | 3)  Non Regression        |
@@ -60,7 +59,6 @@ Tests at the _top take more time to run and are expensive; they should be run le
 | 5)  Smoke                 |
 | 6)  Integration           |
 | 7)  Unit                  |
-+---------------------------+
 
 *The Testing Portfolio*
 Should have more low-level tests than high-level tests
