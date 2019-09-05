@@ -72,3 +72,51 @@ To modify the code:
 - Colleagues review, comment, and approve your PR
 - The contents of the PR can be modified on the remote site or you can push additional commits from your local clone
 - When ready, the PR can be merged to master
+
+## Artifacts
+
+An artifact is a file produced as a result of a Jenkins build
+A single Jenkins build can produce many artifacts
+By default, artifacts are stored where they are created:
+On the agent where this stage of the build runs
+Thus an artifact is deleted when workspace is wiped unless it is explicitly "archived"
+If an artifact is archived, it is copied to the workspace of the build’s job on the Jenkins Master
+
+### What is "Archiving" an Artifact?
+Artifacts can be "archived" in Jenkins
+The "archive" task is a Jenkins feature
+When "archived", the files are attached to the build that created it (it is visible on the build main page):
+http://${JENKINS_URL}/job/${YOUR_JOB}/${BUILD_NUMBER}/artifact
+
+Alternative to the Jenkins "archive" feature is to export the artifact to an external artifact repository such as Artifactory or Nexus
+This is especially beneficial for large artifacts
+
+### How to Archive Artifacts?
+- Pipelines and freestyle jobs can be configured to archive artifacts based on filename patterns
+
+_ In Pipeline, use the archiveArtifacts step
+_ In Freestyle, use the Post-Build action.
+_ Requires a pattern to know which artifacts to archive
+
+- An archived file is kept in ${JENKINS_HOME} forever unless it is explicitly deleted
+- Monitor filesystem usage carefully if you archive artifacts
+
+* Retention policy for artifacts
+Note: Deleting a build deletes attached artifacts
+_ Good practice: discard build and clean it
+- Driven by age: # days to keep a build
+- Driven by number: Max # of builds to keep
+- Important builds can be kept forever
+- Individually marked as Kept Forever
+- Useful for releases or "Promotions"
+
+Artifact Retention Policy is set under the Discard Old Builds section
+
+Resources:
+https://wiki.jenkins-ci.org/display/JENKINS/Copy+Artifact+Plugin
+https://wiki.jenkins-ci.org/display/JENKINS/ArtifactDeployer+Plugin
+http://codurance.com/training/2014/10/03/guide-to-deploying-artifacts-with-jenkins/
+-Best strategy for cleanup and disk space management-
+https://support.cloudbees.com/hc/en-us/articles/215549798-Deleting-Old-Builds-Best-Strategy-for-Cleanup-and-disk-space-management
+https://www.cloudbees.com/blog/copying-artifacts-between-builds-jenkins-workflow
+
