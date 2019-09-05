@@ -1,8 +1,8 @@
-### Goals
+# Goals
 
-# _Validate that the software meets its goals
-# _Search for defects that can be fixed to improve software quality
-# _Facilitate refactoring and upgrades by validating that everything is still working after
+### _Validate that the software meets its goals
+### _Search for defects that can be fixed to improve software quality
+### _Facilitate refactoring and upgrades by validating that everything is still working after
 
 ### Types of Testing
 
