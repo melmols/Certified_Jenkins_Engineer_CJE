@@ -1,4 +1,4 @@
-#Plugins
+# Plugins
 
 - A plugin is in .hpi format
 - This is a JAR format with some special conventions (e.g. no web.xml)
@@ -10,7 +10,7 @@
 - Plugins are located in ${JENKINS_HOME}/plugins
 - Both hpi files and un-archived versions
 
-##Available plugins
+## Available plugins
 
 - Plugins are grouped logically, which is sometimes helpful
 - Use the Filter box if you are looking for something in particular
