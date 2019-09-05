@@ -1,18 +1,18 @@
-###Goals
+### Goals
 
-#_Validate that the software meets its goals
-#_Search for defects that can be fixed to improve software quality
-#_Facilitate refactoring and upgrades by validating that everything is still working after
+# _Validate that the software meets its goals
+# _Search for defects that can be fixed to improve software quality
+# _Facilitate refactoring and upgrades by validating that everything is still working after
 
-###Types of Testing
+### Types of Testing
 
-##_Unit testing, integration testing, smoke testing
-##_Functional testing
-##_Non-regression testing
-##_Acceptance testing
-##_Code Quality and Static Analysis
-##_Performance and Security Testing
-##_Report test results
+## _Unit testing, integration testing, smoke testing
+## _Functional testing
+## _Non-regression testing
+## _Acceptance testing
+## _Code Quality and Static Analysis
+## _Performance and Security Testing
+## _Report test results
 
 ### Automated
 
@@ -41,13 +41,13 @@ the expectations and requirements
 - acceptance tests — tests the full product from the perspective of
 the end-user use cases and feelings. Probably includes _manual _testing
 
-_ Manual
+_Manual
 
 - Is appropriate when test result is subjective, such as user experience testing
 - May also be used when the cost of automation is excessive for some reason
 - Should be performed rarely, and only on software that has passed all automated tests
 
-###Testing Priority Levels
+### Testing Priority Levels
 
 Tests at the _bottom run quickly and inexpensively and should be run very frequently
 Tests at the _top take more time to run and are expensive; they should be run less frequently and only on software that has passed the tests lower on the pyramid.
@@ -67,7 +67,7 @@ before fixing the problems detected by the low-level tests [!]
 When a higher level test fails, consider that it detected a defect in the
 lower-level tests as well as a defect in the code.
 
-##Why is it important to test?
+## Why is it important to test?
 
 - Unit tests usually run every time you compile the code
 - You can define whether functional and non-regression tests run if the unit tests fail
@@ -75,7 +75,7 @@ lower-level tests as well as a defect in the code.
 
 _Jenkins enables you to run large numbers of tests frequently and at appropriate stages in the build cycle
 
-Sources:
+## Sources:
 
 http://martinfowler.com/bliki/UnitTest.html
 http://stackoverflow.com/questions/520064/what-is-unit-test-integration-test-smoke-test-regression-test
