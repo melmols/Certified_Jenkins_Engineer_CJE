@@ -6,13 +6,13 @@
 
 ### Types of Testing
 
-## _Unit testing, integration testing, smoke testing
-## _Functional testing
-## _Non-regression testing
-## _Acceptance testing
-## _Code Quality and Static Analysis
-## _Performance and Security Testing
-## _Report test results
+#### _Unit testing, integration testing, smoke testing
+#### _Functional testing
+#### _Non-regression testing
+#### _Acceptance testing
+#### _Code Quality and Static Analysis
+#### _Performance and Security Testing
+#### _Report test results
 
 ### Automated
 
@@ -73,7 +73,7 @@ lower-level tests as well as a defect in the code.
 - You can define whether functional and non-regression tests run if the unit tests fail
 - Large, broad tests can be set up to run periodically, perhaps during non-work hours, rather than being run each time new code is committed
 
-_Jenkins enables you to run large numbers of tests frequently and at appropriate stages in the build cycle
+*Jenkins enables you to run large numbers of tests frequently and at appropriate stages in the build cycle
 
 ## Sources:
 
