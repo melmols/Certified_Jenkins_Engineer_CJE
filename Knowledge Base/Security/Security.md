@@ -42,3 +42,34 @@
   Administrator can define different permissions to different users within this group
 
 #### Other default features
+
+- JNLP TCP Port is disabled
+  * Used to commmunicate with agents launched via the JNLP protocol, for example: Windows-based agents
+- Markup Formatter is set to plain text
+  * Unsafe characters such as < and & are treated as text characters to prevent unsafe HTML and/or JavaScript
+- Cross Site Request Forgery (CSRF) protection is enabled 
+  * A CSRF attack can lead to a malicious actor to delete projects, alter builds, or modify the Jenkins system configuration
+- Agent-to-Master Access Control sybsystem is turned on
+  * Administrators can create specific exemptions that are required
+ 
+ 
+ ### Enabling security
+ 
+ Navigate to the global config: Manage Config >  Enable Global Security
+ 
+ #### Security Realms for authentication
+ 
+- Setting Security Realms tells Jenkins what system to use for authentication
+    * Security Realm is a dedicated *database* for user and passwords
+- 4 kinds of *Realms* supported out of the box, covered below:
+    1)  Jenkins User Database ( you can choose for users to sign up)
+    2)  Unix user/group Database
+    3)  Servlet Container
+    4)  External LDAP
+    5)  Operations Center SSO
+- New Realms types can be added by other plugins
+    * E.g. Active Directory
+- Users who are not authenticated are always bound to the "Anonymous" special user
+ 
+
+ 
