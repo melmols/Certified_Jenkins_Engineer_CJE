@@ -1,0 +1,56 @@
+pipeline {
+  agent none
+  stages {
+    stage('Buzz Build') {
+      parallel {
+        stage('Build Java 7') {
+          agent {
+            node {
+              label 'java7'
+            }
+          }
+          steps {
+            sh './jenkins/build-all.sh'
+            stash(name: 'Buzz Java 7', includes: 'target/**')
+            }
+          }
+        }
+        stage('Build Java 8') {
+          agent {
+            node {
+              label 'java8'
+            }
+          }
+          steps {
+            sh './jenkins/build-all.sh'
+            stash(name: 'Buzz Java 8', includes: 'target/**')
+          }
+        }
+    stage('Buzz Test') {
+      parallel {
+        stage('Testing A 7') {
+          agent {
+            node {
+              label 'java7'
+            }
+          }
+          steps {
+            unstash 'Buzz Java 7'
+            sh './jenkins/test-all.sh'
+          }
+        }
+        stage('Testing B 8') {
+          agent {
+            node {
+              label 'java8'
+            }
+          }
+          steps {
+            unstash 'Buzz Java 8'
+            sh './jenkins/test-all.sh'
+            echo done.'''
+          }
+        }
+      }
+    }
+}
