@@ -34,27 +34,27 @@ Example code: source CloudbeesUni
 
 ## Slack Notifications when Build Starts
 
-stages {
-  stage ('Start') {
-    steps {
-      // send build started notifications
-      slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
-    }
-  }
-}
+                    stages {
+                      stage ('Start') {
+                        steps {
+                          // send build started notifications
+                          slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME}                                            [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                        }
+                      }
+                    }
 
 ## Email Notification when Build Starts
-/* ... unchanged ... */
+                    /* ... unchanged ... */
 
-// send to email
-emailext (
-  subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
-  body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
-    <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
-  recipientProviders: [[$class: 'DevelopersRecipientProvider']]
-)
+                    // send to email
+                    emailext (
+                      subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
+                      body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
+                        <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME}                         [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+                      recipientProviders: [[$class: 'DevelopersRecipientProvider']]
+                    )
 
-/* ... unchanged ... */
+                    /* ... unchanged ... */
 
 
 
