@@ -6,11 +6,11 @@
 *Setting Security Realms tells Jenkins what system to use for authentication
 Security Realm is a dedicated database for user and passwords
 ||5 kinds of Realms supported out of the box, covered below:
-Jenkins User Database
-Unix user/group Database
-Servlet Container
-External LDAP
-SSO||
+- Jenkins User Database
+- Unix user/group Database
+- Servlet Container
+- External LDAP
+- SSO||
 New Realms types can be added by other plugins
 E.g. Active Director
 Users who are not authenticated are always bound to the "anonymous" special user*
