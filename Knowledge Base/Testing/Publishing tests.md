@@ -14,15 +14,16 @@
   
   # Sending Notifications
   
-  Notifications can be sent through email as well as Slack and other channels
-Must have necessary plugins installed
-Must enable the notification type on the Jenkins Master
-You can specify different notifications to be sent when the Pipeline begins, when it completes, or only when it is successful or when it fails or when a specific stage is successful or fails
-Use environment variables to incorporate identifiers such as job name, build number, and build URL in your message
-The examples use environment variables defined by Jenkins itself
-Some plugins provide other environment variables that you can use
-A full list of system-wide environment variables is available from the Jenkins dashboard
-Slack Notifications when Build Starts:
+- Notifications can be sent through email as well as Slack and other channels
+    - Must have necessary plugins installed
+    - Must enable the notification type on the Jenkins Master
+- You can specify different notifications to be sent when the Pipeline begins, when it completes, or only when it is successful or when     it fails or when a specific stage is successful or fails
+- Use environment variables to incorporate identifiers such as job name, build number, and build URL in your message
+
+    - The examples use environment variables defined by Jenkins itself
+    - Some plugins provide other environment variables that you can use
+    - A full list of system-wide environment variables is available from the Jenkins dashboard
+    - Slack Notifications when Build Starts:
                       
                       stages {
                         stage ('Start') {
