@@ -1,3 +1,12 @@
+#Source: 
+#CloudBees University: Jenkins - Fundamentals | Richness of Pipeline
+#© 2019 CloudBees, Inc. All Rights Reserved
+#/
+#/
+#Template for creating a Pipeline using multiple agents. 
+#It builds and tests for different platforms, independently (meaning it can be run in parallel) 
+#If the build is succesful, stash the results of the build, if not unstash them.
+
 pipeline {
   agent none
   stages {
