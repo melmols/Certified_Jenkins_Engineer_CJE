@@ -56,8 +56,12 @@
                           }
 
         -   You can set timeout for the entire Pipeline or for any stage timeout for the entire Pipeline timeout for the entire Pipeline
-                    
+             Note: you can add a 'when' clause to specify to skip if its not in the master branch etc 
+             Stage('blabla) when { branch 'master' }
+                                                                                                                
+    
                     options {
+                                                                                                              
                       timeout(time: 30, unit: 'MINUTES')
                     }
                     timeout for an input stage
@@ -69,4 +73,4 @@
                     
                     
                     
-                    
+                          
