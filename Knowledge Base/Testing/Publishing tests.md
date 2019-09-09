@@ -1,4 +1,4 @@
-#Publishing test results
+# Publishing test results
 
 - Each suported testing tool generates XML files that contain test results
 - JUnit is a publisher that consumer the XML files that contain test results
@@ -12,7 +12,7 @@
                     
   
   
-  #Sending Notifications
+  # Sending Notifications
   
   Notifications can be sent through email as well as Slack and other channels
 Must have necessary plugins installed
@@ -27,7 +27,7 @@ Slack Notifications when Build Starts:
                         stage ('Start') {
                           steps {
                             // send build started notifications
-                            slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]' (${env.BUILD_URL})")
+                            slackSend (color: '#FFFF00', message: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'                                                         (${env.BUILD_URL})")
                           }
                         }
                       }
@@ -38,7 +38,7 @@ Slack Notifications when Build Starts:
                       emailext (
                         subject: "STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]'",
                         body: """<p>STARTED: Job '${env.JOB_NAME} [${env.BUILD_NUMBER}]':</p>
-                          <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]</a>&QUOT;</p>""",
+                          <p>Check console output at &QUOT;<a href='${env.BUILD_URL}'>${env.JOB_NAME} [${env.BUILD_NUMBER}]                                       </a>&QUOT;</p>""",
                         recipientProviders: [[$class: 'DevelopersRecipientProvider']]
                       )
 
