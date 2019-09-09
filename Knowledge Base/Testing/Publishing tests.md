@@ -71,6 +71,30 @@
                       }
                     } 
                     
-                    
-                    
+
+# POST
+
+-   post section contains steps to be executed at the end of a Pipeline run or stage
+-   post section is divided into conditions such as always, success, failure
+-   Each condition lists steps to be executed
                           
+-   _Always_ archive the artifacts
+    - Even if the stage fails, you want to try to save artifacts and test results so you have them after the Pipeline run finishes
+-   _Stash_ the build only on success
+                    ...
+                    stage('Build Java 7') {
+                      steps {
+                        sh '''
+                          echo I am a $BUZZ_NAME!
+                          ./jenkins/build.sh
+                        '''
+                      }
+                      post {
+                        always {
+                          archiveArtifacts(artifacts: 'target/*.jar', fingerprint: true)
+                        }
+                        success {
+                          stash(name: 'Buzz Java 7', includes: 'target/**')
+                        }
+                      }
+                    }
