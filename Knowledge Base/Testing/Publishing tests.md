@@ -81,6 +81,7 @@
 -   _Always_ archive the artifacts
     - Even if the stage fails, you want to try to save artifacts and test results so you have them after the Pipeline run finishes
 -   _Stash_ the build only on success
+                    
                     ...
                     stage('Build Java 7') {
                       steps {
