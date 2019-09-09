@@ -23,6 +23,7 @@ The examples use environment variables defined by Jenkins itself
 Some plugins provide other environment variables that you can use
 A full list of system-wide environment variables is available from the Jenkins dashboard
 Slack Notifications when Build Starts:
+                      
                       stages {
                         stage ('Start') {
                           steps {
