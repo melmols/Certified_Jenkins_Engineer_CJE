@@ -1,9 +1,9 @@
-#Basics
+# Basics
 
 
 ## Continuous Workflow
 
-###Best Practices
+### Best Practices
 
 - Put the modified code into SCM
 - Build code
