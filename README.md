@@ -3,7 +3,7 @@ This is aimed as a guide for CJE, including best practices and code exercises
 
 
 
-#Guide Structure
+# Guide Structure
 
 - Introduction
 - Software Development cycle
