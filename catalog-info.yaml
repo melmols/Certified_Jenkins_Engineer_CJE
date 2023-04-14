@@ -1,0 +1,10 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: Certified_Jenkins_Engineer_CJE
+  annotations:
+    github.com/project-slug: melmols/Certified_Jenkins_Engineer_CJE
+spec:
+  type: other
+  lifecycle: unknown
+  owner: security
